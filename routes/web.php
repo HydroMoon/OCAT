@@ -21,6 +21,10 @@ Route::get('about', function () {
     return view('about');
 })->name('about');
 
+Route::get('programs', function () {
+    return view('programs');
+})->name('programs');
+
 Route::get('contact', function () {
     return view('contact');
 })->name('contact');

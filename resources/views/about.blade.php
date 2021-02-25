@@ -1,44 +1,89 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="py-4">
-        @include('extra.nav')
-        <ul class="row nav nav-pills my-3" id="pills-tab" role="tablist">
-            <li class="nav-item mx-auto">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                aria-controls="pills-home" aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item mx-auto">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                aria-controls="pills-profile" aria-selected="false">Profile</a>
-            </li>
-            <li class="nav-item mx-auto ">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                aria-controls="pills-contact" aria-selected="false">Contact</a>
-            </li>
-          </ul>
-          <div class="tab-content pt-2 pl-1" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Consequat
-              occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat
-              velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo
-              anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing
-              minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt
-              nostrud.</div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Ad
-              pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt
-              amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id
-              incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis
-              deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Est
-              quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex.
-              Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim
-              exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit
-              aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia
-              elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt
-              tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim
-              reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt
-              ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur
-              mollit voluptate voluptate consequat non.</div>
-          </div>
+<div class="py-4">
+    @include('extra.nav')
+
+    <div class="row mx-1 border" style="background: #f9f9f9;">
+        <div class="col-sm-6">
+            <div class="mx-2 mt-4">
+                <h4 class="h4">نبذة تعريفية عن الجامعة</h4>
+                <p class="mt-3">تأسست كلية أمدرمان للطيران والتكنولوجيا في عام 2019 بقرار وزاري بالرقم (212) وهي إحدى
+                    مؤسسات وزارة التعليم العالي والبحث العلمة.</p>
+                <p class="mt-2">تحتوي الكلية على العديد من البرامج المتاحة للطلاب للاختيار منها:</p>
+                <ul class="list-unstyled ms-3 fw-bold text-muted">
+                    <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        بكالوريوس الجمارك والتجارة الدولية
+                    </li>
+                    <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        بكالوريوس الاقتصاد والعلوم المالية
+                    </li>
+                    <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        بكالوريوس العمليات الجوية
+                    </li>
+                    <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        بكالوريوس العلوم الإدارية (محاسبة وإدارة أعمال)
+                    </li>
+                    <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        بكالوريوس تقانة المعلومات
+                    </li>
+                </ul>
+                <hr class="mx-5">
+                <h4 class="h4">الرؤية</h4>
+                <p class="mt-3">الوصول الى أعلى درجات التميز العلمي والتقني واستخدامه في مجالات البحث والتدريس والتدريب
+                    وتطوير المجتمع وتنميته.</p>
+                <hr class="mx-5">
+                <h4 class="h4">الرسالة</h4>
+                <p class="mt-3">المشاركة في تحقيق التميز في المجالات الاقتصادية والاجتماعية للمجتمع السوداني بصورة عامة
+                    والتميز في مجال الطيران بصورة خاصة.</p>
+                <p class="mt-1">تأهيل وتخريج كادر بشري مؤهل على مستوى الدبلوم والبكالوريوس والدراسات العليا.</p>
+                <hr class="mx-5">
+                <h4 class="h4">الأهداف</h4>
+                <p class="mt-3">ترقية وتطوير مجال الطيران في السودان.</p>
+                <p class="mt-1">العمل على نشر الوعي في كافة مجالات العلوم التطبيقية والإنسانية.</p>
+                <p class="mt-1">تأهيل الطالب بالمعرفة العلمية والمهارات الضرورية التي تمكنه من التميز في خدمة المجتمع في
+                    كافة المجالات.</p>
+                <p class="mt-1">الإسهام في رفع مستوى كفاءة الطالب في البرامج التعليمية.</p>
+                <p class="mt-1">توفير بيئة تعليمية ملائمة تسهم بالارتقاء ونجاح الطالب في مجالات العلوم المختلفة.</p>
+            </div>
+        </div>
+        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+            
+        </div>
     </div>
+    <div class="row p-3">
+      <hr>
+      <div id="carouselExampleFade" class="carousel slide border" data-mdb-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p class="d-block w-100">تأهيل الطالب بالمعرفة العلمية والمهارات الضرورية التي تمكنه من التميز في خدمة المجتمع في
+                  كافة المجالات.</p>
+            </div>
+            <div class="carousel-item">
+              <p class="d-block w-100">توفير بيئة تعليمية ملائمة تسهم بالارتقاء ونجاح الطالب في مجالات العلوم المختلفة.</p>
+            </div>
+            <div class="carousel-item">
+              <p class="d-block w-100">تأهيل الطالب بالمعرفة العلمية والمهارات الضرورية التي تمكنه من التميز في خدمة المجتمع في
+                كافة المجالات.</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-mdb-target="#carouselExampleFade" type="button"
+            data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" data-mdb-target="#carouselExampleFade" type="button"
+            data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    </div>
+
+</div>
 @endsection

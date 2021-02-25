@@ -1,9 +1,17 @@
-.navbar.navbar-dark .navbar-nav .nav-item > .nav-link:hover {
+body { 
+    font-family: 'DroidArabicKufiRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+ }
+ 
+ .navbar.navbar-dark .navbar-nav .nav-item > .nav-link {
+    color: #ffffff;
+}
+
+ .navbar.navbar-dark .navbar-nav .nav-item > .nav-link:hover {
     background-color: rgb(255, 255, 255);
     color: #3E2723;
 }
-
-
 
 .news-title {
     font-weight: 700;
@@ -11,4 +19,18 @@
     line-height: 21px;
     margin: 0 0 8px;
     text-decoration: none;
+}
+
+.list-unstyled li i {
+    color: #c5c5c5;
+}
+
+.list-unstyled li:hover i  {
+    transition: color 0.3s;
+    color: #49c32c;
+}
+
+.list-unstyled li:hover   {
+    transition: color 0.3s;
+    color: #000000;
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-4">
+<div dir="rtl" class="pb-4">
     @include('extra.nav')
 
     <div class="row pr-2 pl-2 pt-2 mt-2">
@@ -9,16 +9,16 @@
             <div class="card text-left">
                 <img class="card-img-top" src="holder.js/100px180/" alt="">
                 <div class="card-body">
-                    <div class="">
-                        <h3 class="card-title d-inline">Latest news!</h3>
-                        <a class="btn btn-sm btn-info d-inline float-right" href="#">more</a>
+                    <div class="clearfix">
+                        <h3 class="card-title d-inline float-start">آخر الأخبار</h3>
+                        <a class="btn btn-sm btn-secondary d-inline float-end" href="#">رؤية المزيد</a>
                     </div>
                     <hr style="height:1px;border:none;color:#333;background-color:#333;">
                     <div class="row m-1">
                         <img class="col-sm-4" src="https://media.npr.org/assets/img/2017/09/12/securedrop_wide-472d6f4eac0cacba984ecddd185af7ba4e07ba35-s700-c85.png" alt="">
                         <div class="col-sm-8">
                             <h4 class="card-title news-title mt-2">Doha Institute holds seminar on Academic English in a Virtual Setting!</h4>
-                            <p class="text-muted text-success">February 08 - 2021</p>
+                            <p class="text-success">February 08 - 2021</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                         <img class="col-sm-4" src="https://media.npr.org/assets/img/2017/09/12/securedrop_wide-472d6f4eac0cacba984ecddd185af7ba4e07ba35-s700-c85.png    " alt="">
                         <div class="col-sm-8">
                             <h4 class="card-title news-title mt-2">Doha Institute will hold its annual seminar on teaching and learning English language</h4>
-                            <p class="text-muted text-success">February 08 - 2021</p>
+                            <p class="text-success">February 08 - 2021</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="row pr-2 pl-2 mt-1">
+    <div dir="ltr" class="row pr-2 pl-2 mt-1">
         <!-- Carousel wrapper -->
 <div
 id="carouselBasicExample"
