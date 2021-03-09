@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="pb-4">
+    <div>
         @include('extra.nav')
-        <h4 class="h4 mx-2 my-3 text-muted">البرامج المتاحة في الجامعة</h4>
-        <div div class="row m-1">
+        <div div class="row p-2 mx-2 border" style="background: #f9f9f9;">
+          <h4 class="h4 mx-2 my-3 text-muted" >البرامج المتاحة في الجامعة</h4>
             <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
+                <div class="accordion-item border">
                   <h2 class="accordion-header" id="headingOne">
                     <button
-                      class="accordion-button"
+                      class="accordion-button fw-bold"
                       type="button"
                       data-mdb-toggle="collapse"
                       data-mdb-target="#collapseOne"
@@ -26,20 +26,34 @@
                     data-mdb-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is hidden by default,
-                      until the collapse plugin adds the appropriate classes that we use to style each
-                      element. These classes control the overall appearance, as well as the showing and
-                      hiding via CSS transitions. You can modify any of this with custom CSS or
-                      overriding our default variables. It's also worth noting that just about any HTML
-                      can go within the <strong>.accordion-body</strong>, though the transition does limit
-                      overflow.
+                      <strong class="text-muted">بكالوريوس الجمارك والتجارة الدولية</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يتيح للخريج العمل في مجالات الجمارك والتخليص الجمركي في السودان أو خارجه وايضاً مجالات عمل التجارة المختلفة.</li>
+                      </ul>
+                      <strong class="text-muted">بكالوريوس الاقتصاد والعلوم المالية</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في البنوك والقطاعات الاقتصادية داخلياً وخارجياً.</li>
+                      </ul>
+                      <strong class="text-muted">بكالوريويس العمليات الجوية</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في شركات الطيران المحلية والخارجية في أقسام العمليات الجوية في كل شركات الطيران.</li>
+                      </ul>
+                      <strong class="text-muted">بكالوريوس العلوم الإدارية (محاسبة وإدارة أعمال).</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال المحاسبة وإدارة الأعمال.</li>
+                      </ul>
+                      <strong class="text-muted">بكالوريوس تقانة المعلومات</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال تقانة المعلومات وأيضا شركات الطيران المختلفة.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
+                <hr class="mx-5" style="color: #3E2723;">
+                <div class="accordion-item border">
                   <h2 class="accordion-header" id="headingTwo">
                     <button
-                      class="accordion-button collapsed"
+                      class="accordion-button fw-bold collapsed"
                       type="button"
                       data-mdb-toggle="collapse"
                       data-mdb-target="#collapseTwo"
@@ -56,20 +70,22 @@
                     data-mdb-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by
-                      default, until the collapse plugin adds the appropriate classes that we use to
-                      style each element. These classes control the overall appearance, as well as the
-                      showing and hiding via CSS transitions. You can modify any of this with custom CSS
-                      or overriding our default variables. It's also worth noting that just about any
-                      HTML can go within the <strong>.accordion-body</strong>, though the transition does
-                      limit overflow.
+                      <strong class="text-muted">دبلوم الضيافة الجوية</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل شركات الطيران المختلفة في أقسام الضيافة الجوية.</li>
+                      </ul>
+                      <strong class="text-muted">دبلوم تقانة المعلومات</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال تقانة المعلومات وأيضا شركات الطيران المختلفة.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
+                <hr class="mx-5" style="color: #3E2723;">
+                <div class="accordion-item border">
                   <h2 class="accordion-header" id="headingThree">
                     <button
-                      class="accordion-button collapsed"
+                      class="accordion-button fw-bold collapsed"
                       type="button"
                       data-mdb-toggle="collapse"
                       data-mdb-target="#collapseThree"
@@ -86,13 +102,26 @@
                     data-mdb-parent="#accordionExample"
                   >
                     <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                      until the collapse plugin adds the appropriate classes that we use to style each
-                      element. These classes control the overall appearance, as well as the showing and
-                      hiding via CSS transitions. You can modify any of this with custom CSS or
-                      overriding our default variables. It's also worth noting that just about any HTML
-                      can go within the <strong>.accordion-body</strong>, though the transition does limit
-                      overflow.
+                      <strong class="text-muted">الجمارك</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال التخليص الجمركي.</li>
+                      </ul>
+                      <strong class="text-muted">تقانة المعلومات</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال تقانة المعلومات وأيضا شركات الطيران المختلفة.</li>
+                      </ul>
+                      <strong class="text-muted">وكالات السفر والسياحة</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل شركات الطيران المختلفة ووكالات السفر والسياحة داخلياً وخارجياً.</li>
+                      </ul>
+                      <strong class="text-muted">المحاسبة الإلكترونية</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال المحاسبة.</li>
+                      </ul>
+                      <strong class="text-muted">التسويق والمبيعات</strong>
+                      <ul class="list-unstyled ms-3 mt-2">
+                        <li>يسمح للطالب الخريج العمل في كل المؤسسات الحكومية والشركات الخاصة في مجال التسويق.</li>
+                      </ul>
                     </div>
                   </div>
                 </div>

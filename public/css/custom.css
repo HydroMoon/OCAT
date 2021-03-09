@@ -9,8 +9,8 @@ body {
 }
 
  .navbar.navbar-dark .navbar-nav .nav-item > .nav-link:hover {
-    background-color: rgb(255, 255, 255);
-    color: #3E2723;
+    background-color: rgb(245, 236, 95);
+    color: #bb375f;
 }
 
 .news-title {
@@ -34,3 +34,13 @@ body {
     transition: color 0.3s;
     color: #000000;
 }
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+.Site-content {
+    flex: 1;
+  }  

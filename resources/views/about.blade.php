@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="py-4">
+<div>
     @include('extra.nav')
 
     <div class="row mx-1 border" style="background: #f9f9f9;">
         <div class="col-sm-6">
-            <div class="mx-2 mt-4">
+            <div class="mx-2 mt-4 px-5">
                 <h4 class="h4">نبذة تعريفية عن الجامعة</h4>
                 <p class="mt-3">تأسست كلية أمدرمان للطيران والتكنولوجيا في عام 2019 بقرار وزاري بالرقم (212) وهي إحدى
                     مؤسسات وزارة التعليم العالي والبحث العلمة.</p>
@@ -52,11 +52,11 @@
                 <p class="mt-1">توفير بيئة تعليمية ملائمة تسهم بالارتقاء ونجاح الطالب في مجالات العلوم المختلفة.</p>
             </div>
         </div>
-        <div class="col-sm-6 d-flex align-items-center justify-content-center">
+        {{-- <div class="col-sm-6 d-flex align-items-center justify-content-center">
             
-        </div>
+        </div> --}}
     </div>
-    <div class="row p-3">
+    {{-- <div class="row p-3">
       <hr>
       <div id="carouselExampleFade" class="carousel slide border" data-mdb-ride="carousel">
         <div class="carousel-inner">
@@ -83,7 +83,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    </div>
+    </div> --}}
 
 </div>
 @endsection

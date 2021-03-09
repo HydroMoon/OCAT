@@ -6,150 +6,65 @@
 
     <div class="row pr-2 pl-2 pt-2 mt-2">
         <div class="col-sm">
-            <div class="card text-left">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card text-left shadow-sm">
+                {{-- <img class="card-img-top" src="holder.js/100px180/" alt=""> --}}
                 <div class="card-body">
                     <div class="clearfix">
                         <h3 class="card-title d-inline float-start">آخر الأخبار</h3>
-                        <a class="btn btn-sm btn-secondary d-inline float-end" href="#">رؤية المزيد</a>
+                        <a class="btn btn-sm btn-secondary d-inline float-end" href="{{ route('news') }}">رؤية
+                            المزيد</a>
                     </div>
                     <hr style="height:1px;border:none;color:#333;background-color:#333;">
+                    @forelse ($posts as $post)
                     <div class="row m-1">
-                        <img class="col-sm-4" src="https://media.npr.org/assets/img/2017/09/12/securedrop_wide-472d6f4eac0cacba984ecddd185af7ba4e07ba35-s700-c85.png" alt="">
+                        <img class="col-sm-4" src="{{ asset('images/' . $post->image) }}" alt="">
                         <div class="col-sm-8">
-                            <h4 class="card-title news-title mt-2">Doha Institute holds seminar on Academic English in a Virtual Setting!</h4>
-                            <p class="text-success">February 08 - 2021</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                            <h4 class="card-title news-title mt-2">{{ $post->title }}</h4>
+                            <p class="text-success">&#x200E({{ date_format($post->created_at, 'd/m/Y g:i A') }})</p>
+                            <p>{{ mb_substr(strip_tags($post->body, '<br>'), 0, 300) }}{{ strlen(strip_tags($post->body))
+                              > 300 ? "..." : "" }}</p>
                         </div>
                     </div>
+                    @if($loop->last)
+                    @else
                     <hr>
-                    <div class="row m-1">
-                        <img class="col-sm-4" src="https://media.npr.org/assets/img/2017/09/12/securedrop_wide-472d6f4eac0cacba984ecddd185af7ba4e07ba35-s700-c85.png    " alt="">
-                        <div class="col-sm-8">
-                            <h4 class="card-title news-title mt-2">Doha Institute will hold its annual seminar on teaching and learning English language</h4>
-                            <p class="text-success">February 08 - 2021</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                        </div>
-                    </div>
+                    @endif
+                    @empty
+                        <p>لا يوجد أخبار جديدة.</p>
+                    @endforelse
                 </div>
             </div>
         </div>
     </div>
     <div class="row pr-2 pl-2 mt-1">
         <div class="col-sm mt-2">
-            <div class="card text-left">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
-                <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Body</p>
+            <div class="shadow-sm p-4">
+                <div class="media">
+                    <h3 class="h3 d-inline">كلمة العميد</h3>
+                    <img class="rounded-circle img-thumbnail float-end d-inline"
+                        src="{{ asset('images/dean.jpeg') }}" alt=""
+                        width="75">
+                    <div class="media-body ms-3 mt-2">
+                        <blockquote class="blockquote border-0 p-0">
+                            <p class="font-italic lead"><i class="fa fa-quote-right mx-3 text-success"></i>يطيب لي مخاطبتكم  في هذا اليوم الإستثنائي التاريخي الذي يجمع مابين ذكرى الاستقلال المجيد واستقبال طلابنا الجدد الذين انضموا لنا هذا العام
+
+                                وهم بلا شك دماءً جديدة تم ضخها في أوصال هذه الجامعة الفتية لمواصلة الركب  مع أخوة ً لهم سابقين سطروا تفوقهم وتميزهم  بحروف من ذهب.</p>
+                            <footer class="blockquote-footer mt-3">حسن خلف الله محمود
+                            </footer>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-sm mt-2">
-            <div class="card text-left">
-                <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card text-left pb-3">
                 <div class="card-body">
-                    <h4 class="card-title">Calender</h4>
-                    <p class="card-text">Dates and time</p>
+                    <h4 class="card-title">التقويم</h4>
+
                 </div>
+                <div id='calendar'></div>
             </div>
         </div>
-    </div>
-    <div dir="ltr" class="row pr-2 pl-2 mt-1">
-        <!-- Carousel wrapper -->
-<div
-id="carouselBasicExample"
-class="carousel slide carousel-fade"
-data-mdb-ride="carousel"
->
-<!-- Indicators -->
-<div class="carousel-indicators">
-  <button
-    type="button"
-    data-mdb-target="#carouselBasicExample"
-    data-mdb-slide-to="0"
-    class="active"
-    aria-current="true"
-    aria-label="Slide 1"
-  ></button>
-  <button
-    type="button"
-    data-mdb-target="#carouselBasicExample"
-    data-mdb-slide-to="1"
-    aria-label="Slide 2"
-  ></button>
-  <button
-    type="button"
-    data-mdb-target="#carouselBasicExample"
-    data-mdb-slide-to="2"
-    aria-label="Slide 3"
-  ></button>
-</div>
-
-<!-- Inner -->
-<div class="carousel-inner">
-  <!-- Single item -->
-  <div class="carousel-item active">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>First slide label</h5>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </div>
-
-  <!-- Single item -->
-  <div class="carousel-item">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </div>
-
-  <!-- Single item -->
-  <div class="carousel-item">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Third slide label</h5>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </div>
-</div>
-<!-- Inner -->
-
-<!-- Controls -->
-<button
-  class="carousel-control-prev"
-  type="button"
-  data-mdb-target="#carouselBasicExample"
-  data-mdb-slide="prev"
->
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button
-  class="carousel-control-next"
-  type="button"
-  data-mdb-target="#carouselBasicExample"
-  data-mdb-slide="next"
->
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-</div>
-<!-- Carousel wrapper -->
     </div>
 </div>
 @endsection

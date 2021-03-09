@@ -15,6 +15,22 @@
 
     <title>كلية أمدرمان للطيران والتكنولوجيا</title>
 
+    <link href='css/main.css' rel='stylesheet' />
+    <script src='js/main.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+
+    @yield('stylee')
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/mdb.min.js') }}" defer></script>
@@ -36,8 +52,8 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 
-<body>
-    <div id="app">
+<body class="Site">
+    <div id="app" class="Site-content">
         <main class="container">
             @yield('content')
 

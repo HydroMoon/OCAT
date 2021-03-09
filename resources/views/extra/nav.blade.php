@@ -1,5 +1,5 @@
 <img class="card-img-top mb-2" src="{{ asset('images/logo.png') }}" alt="">
-<nav dir="rtl" class="navbar navbar-expand-sm navbar-dark shadow-sm fw-bold fs4" style="background-color: #3E2723">
+<nav dir="rtl" class="navbar navbar-expand-sm navbar-dark shadow-sm fw-bold fs4" style="background-color: #bb375f">
     <div class="container-fluid">
         <a class="navbar-brand d-sm-block d-md-none" href="/">كلية امدرمان</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -15,10 +15,13 @@
                 <a class="nav-link" href="{{ route('about') }}">من نحن</span></a>
             </li>
             <li class="nav-item dropdown">
+                <a class="nav-link" href="{{ route('news') }}">كل الأخبار</span></a>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link" href="{{ route('programs') }}">البرامج</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" href="{{ route('programs') }}">التقويم</span></a>
+                <a class="nav-link" href="{{ route('calender') }}">التقويم</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" href="{{ route('programs') }}">الصور والفديو</span></a>
