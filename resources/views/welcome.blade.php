@@ -40,7 +40,7 @@
         <div class="col-sm mt-2">
             <div class="shadow-sm p-4">
                 <div class="media">
-                    <h3 class="h3 d-inline">كلمة رئيس مجلس الأدارة</h3>
+                    <h3 class="h3 d-inline">كلمة رئيس مجلس الإدارة</h3>
                     <img class="rounded-circle img-thumbnail float-end d-inline"
                         src="{{ asset('images/dean.jpeg') }}" alt=""
                         width="75">

@@ -2,9 +2,9 @@
 <nav dir="rtl" class="navbar navbar-expand-sm navbar-dark shadow-sm fw-bold fs4" style="background-color: #bb375f">
     <div class="container-fluid">
         <a class="navbar-brand d-sm-block d-md-none" href="/">كلية امدرمان</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+    <button class="navbar-toggler d-lg-none d-sm-block" type="button" data-mdb-toggle="collapse" data-mdb-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars text-white"></i>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
