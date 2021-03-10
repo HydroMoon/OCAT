@@ -98,7 +98,7 @@
 
             initialView: 'listWeek',
             dayMaxEvents: true, // allow "more" link when too many events
-            events: {{ $events }}
+            events: {!! $events !!}
         });
         calendar.render();
     });

@@ -29,12 +29,7 @@ class HomeController extends Controller
     {
         $posts = Post::orderBy('id', 'desc')->take(2)->get();
 
-        $event = Event::all('title', 'start', 'end');
-
-        foreach ($event as $item) {
-          $item->start = $item->start->format('c');
-          echo $item->start;
-        }
+        $event = json_encode(Event::all('title', 'start', 'end')->toArray(), JSON_UNESCAPED_UNICODE);
 
         return view('welcome')->with(['posts' => $posts, 'events' => $event]);
     }
