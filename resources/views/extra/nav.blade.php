@@ -38,7 +38,7 @@
                     <a class="nav-link" href="{{ route('dash') }}">لوحة التحكم</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-item text-center waves-effect waves-light" href="{{ route('logout') }}"
+                    <a class="nav-link" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
                         تسجيل الخروج

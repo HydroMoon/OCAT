@@ -19,7 +19,7 @@
                     <div class="row m-1">
                         <img class="col-sm-4" src="{{ asset('images/' . $post->image) }}" alt="">
                         <div class="col-sm-8">
-                            <h4 class="card-title news-title mt-2">{{ $post->title }}</h4>
+                            <h4 class="card-title news-title mt-2"><a href="{{ route('blog.single', $post->slug) }}" style="color: #4f4f4f;">{{ $post->title }}</a></h4>
                             <p class="text-success">&#x200E({{ date_format($post->created_at, 'd/m/Y g:i A') }})</p>
                             <p>{{ mb_substr(strip_tags($post->body, '<br>'), 0, 300) }}{{ strlen(strip_tags($post->body))
                               > 300 ? "..." : "" }}</p>

@@ -8,13 +8,13 @@
             <img class=" m-2 mx-auto d-block" src="/apple-touch-icon.png" alt="">
             <hr class="mx-5">
             <p class="text-muted text-center">كلية أمدرمان للطيران والتكنولوجيا</p>
-            <form action="{{ route('login') }}" method="post">
+            <form action="{{ route('login') }}" method="POST">
                 @csrf
                 <div class="form-group p-3">
                     <label class="ms-2" for="email">البريد الإلكتروني</label>
                     <input type="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror" required autocomplete="email" autofocus>
                     <label class="ms-2 mt-2" for="password">كلمة المرور</label>
-                    <input type="password" name="" id="" class="form-control mt-2 @error('password') is-invalid @enderror" required autocomplete="current-password">
+                    <input type="password" name="password" id="" class="form-control mt-2 @error('password') is-invalid @enderror" required autocomplete="current-password">
                     @error('password')
                     <span class="invalid-feedback my-2" role="alert">
                         <strong>البيانات خاطئة!</strong>
