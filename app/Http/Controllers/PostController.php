@@ -11,10 +11,10 @@ use Purifier;
 
 class PostController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:admin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('web');
+    }
     /**
      * Display a listing of the resource.
      *
