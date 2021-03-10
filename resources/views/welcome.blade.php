@@ -97,7 +97,8 @@
             editable: true,
 
             initialView: 'listWeek',
-            editable: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: {{ $events }}
         });
         calendar.render();
     });

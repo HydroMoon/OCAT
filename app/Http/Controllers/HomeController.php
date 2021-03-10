@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Contactus;
+use App\Models\Event;
 
 
 class HomeController extends Controller
@@ -28,14 +29,21 @@ class HomeController extends Controller
     {
         $posts = Post::orderBy('id', 'desc')->take(2)->get();
 
-        return view('welcome')->with(["posts" => $posts]);
+        $event = Event::all('title', 'start', 'end');
+
+        foreach ($event as $item) {
+          $item->start = $item->start->format('c');
+          echo $item->start;
+        }
+
+        return view('welcome')->with(['posts' => $posts, 'events' => $event]);
     }
 
     public function news()
     {
         $posts = Post::orderBy('id', 'desc')->take(2)->get();
 
-        return view('news')->with(["posts" => $posts]);
+        return view('news')->with(['posts' => $posts]);
     }
 
     public function getSingle($slug)

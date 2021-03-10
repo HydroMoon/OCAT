@@ -35,11 +35,12 @@ Route::resource('/posts', 'App\Http\Controllers\PostController');
 Auth::routes();
 
 Route::get('dash', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dash');
+Route::post('add_event', [App\Http\Controllers\AdminController::class, 'addEvent'])->name('addEvent');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/news', [App\Http\Controllers\HomeController::class, 'news'])->name('news');
+Route::get('news', [App\Http\Controllers\HomeController::class, 'news'])->name('news');
 
 
-Route::post('/contactus', [App\Http\Controllers\HomeController::class, 'saveMessage'])->name('contactus');
+Route::post('contactus', [App\Http\Controllers\HomeController::class, 'saveMessage'])->name('contactus');
 
 Route::get('news/{slug}', ['as' => 'blog.single', 'uses' => 'App\Http\Controllers\HomeController@getSingle'])->where('slug', '[\w\d\-\_]+');

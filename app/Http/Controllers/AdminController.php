@@ -22,6 +22,22 @@ class AdminController extends Controller
 
     public function addEvent(Request $request)
     {
-        # code...
+        $this->validate($request, array(
+            'title' => 'required|max:255',
+            'start' => 'required',
+            'end' => 'required',
+          ));
+
+          $event = new Event;
+
+          $event->title = $request->title;
+          $event->start = $request->start;
+          $event->end = $request->end;
+
+          $event->save();
+
+          Session::flash('success', __('trans.post_add'));
+
+        return redirect()->route('calender');
     }
 }

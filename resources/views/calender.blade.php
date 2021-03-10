@@ -26,18 +26,19 @@
                 <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form action="#" method="post">
+              <form id="event-form" action="{{ route('addEvent') }}" method="post">
+                @csrf
                 <div class="form-group">
                   <label for="">عنوان الحدث</label>
                   <input type="text" class="form-control" name="title" placeholder="">
                 </div>
                 <div class="form-group">
                   <label for="">تاريخ البداية</label>
-                  <input type="date" class="form-control" name="title" placeholder="">
+                  <input type="date" class="form-control" name="start" placeholder="">
                 </div>
                 <div class="form-group">
                   <label for="">تاريخ النهاية</label>
-                  <input type="date" class="form-control" name="title" placeholder="">
+                  <input type="date" class="form-control" name="end" placeholder="">
                 </div>
               </form>
             </div>
@@ -45,7 +46,8 @@
                 <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
                     Close
                 </button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" onclick="event.preventDefault();
+                document.getElementById('event-form').submit();">Save changes</button>
             </div>
         </div>
     </div>
