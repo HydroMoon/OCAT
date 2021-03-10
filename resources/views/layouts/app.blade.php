@@ -15,21 +15,6 @@
 
     <title>كلية أمدرمان للطيران والتكنولوجيا</title>
 
-    <link href='css/main.css' rel='stylesheet' />
-    <script src='js/main.js'></script>
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          editable: 'true',
-        });
-        calendar.render();
-      });
-
-    </script>
-
     @yield('stylee')
 
     <!-- Scripts -->

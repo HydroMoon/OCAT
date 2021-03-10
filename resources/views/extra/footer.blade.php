@@ -47,7 +47,7 @@
     <!-- Copyright -->
     <div class="footer-copyright pt-3 px-3 d-flex text-center" style="background-color: #912a49">
         <p class="nav-link mx-auto">حقوق النشر © 2021: كلية امدرمان للطيران والتكنولوجيا</p>
-        <a class="nav-link mx-auto text-white" href="#" class="mx-auto">تواصل معنا</a>
+        <a class="nav-link mx-auto text-white" href="{{ route('contact') }}" class="mx-auto">تواصل معنا</a>
     </div>
     <!-- Copyright -->
 </footer>

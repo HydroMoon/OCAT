@@ -68,3 +68,39 @@
     </div>
 </div>
 @endsection
+
+
+@section('stylee')
+<link href='css/main.css' rel='stylesheet' />
+<script src='js/main.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'listDay,listWeek'
+            },
+
+            views: {
+                listDay: {
+                    buttonText: 'list day'
+                },
+                listWeek: {
+                    buttonText: 'list week'
+                }
+            },
+
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+
+            initialView: 'listWeek',
+            editable: true,
+        });
+        calendar.render();
+    });
+
+</script>
+@endsection

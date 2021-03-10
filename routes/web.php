@@ -29,14 +29,12 @@ Route::get('contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('dash', function () {
-    return view('dashboard');
-})->name('dash');
-
 
 Route::resource('/posts', 'App\Http\Controllers\PostController');
 
 Auth::routes();
+
+Route::get('dash', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dash');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/news', [App\Http\Controllers\HomeController::class, 'news'])->name('news');
