@@ -110,15 +110,12 @@
             },
 
 
-
             navLinks: true, // can click day/week names to navigate views
             editable: true,
 
             initialView: 'dayGridMonth',
             editable: true,
-            events: {
-                !!$events!!
-            }
+            events: {!! $events !!}
         });
         calendar.render();
     });
