@@ -24,8 +24,7 @@ class AdminController extends Controller
     {
         $this->validate($request, array(
             'title' => 'required|max:255',
-            'start' => 'required',
-            'end' => 'required',
+            'start' => 'required|date',
           ));
 
           $event = new Event;
@@ -37,6 +36,15 @@ class AdminController extends Controller
           $event->save();
 
           Session::flash('success', __('trans.post_add'));
+
+        return redirect()->route('calender');
+    }
+
+    public function delEvent(Request $request)
+    {
+        $event = Event::find($request->id);
+
+        $event->delete();
 
         return redirect()->route('calender');
     }

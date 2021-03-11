@@ -34,6 +34,15 @@ class HomeController extends Controller
         return view('welcome')->with(['posts' => $posts, 'events' => $event]);
     }
 
+    public function calender()
+    {
+        $event = json_encode(Event::all('title', 'start', 'end')->toArray(), JSON_UNESCAPED_UNICODE);
+
+        $eventdel = Event::all('id', 'title', 'start');
+
+        return view('calender')->with(['events' => $event, 'eventDel' => $eventdel]);
+    }
+
     public function news()
     {
         $posts = Post::orderBy('id', 'desc')->take(2)->get();

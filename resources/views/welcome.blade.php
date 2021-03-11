@@ -57,10 +57,10 @@
             </div>
         </div>
         <div class="col-sm mt-2">
-            <div class="card text-left pb-3">
+            <div class="card text-left p-3">
                 <div class="card-body">
-                    <h4 class="card-title">التقويم</h4>
-
+                    <h4 class="card-title d-inline">التقويم - احداث الاسبوع</h4>
+                    <a class="text-muted d-inline float-end" href="{{ route('calender') }}">الذهاب للتقويم</a>
                 </div>
                 <div id='calendar'></div>
             </div>
@@ -73,25 +73,18 @@
 @section('stylee')
 <link href='css/main.css' rel='stylesheet' />
 <script src='js/main.js'></script>
+<script src='js/locale/ar.js'></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
 
             headerToolbar: {
-                left: 'prev,next today',
+                left: 'listWeek',
                 center: 'title',
-                right: 'listDay,listWeek'
             },
-
-            views: {
-                listDay: {
-                    buttonText: 'list day'
-                },
-                listWeek: {
-                    buttonText: 'list week'
-                }
-            },
+            
+            locale: 'ar',
 
             navLinks: true, // can click day/week names to navigate views
             editable: true,

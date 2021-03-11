@@ -21,10 +21,6 @@ Route::get('programs', function () {
     return view('programs');
 })->name('programs');
 
-Route::get('calender', function () {
-    return view('calender');
-})->name('calender');
-
 Route::get('contact', function () {
     return view('contact');
 })->name('contact');
@@ -37,7 +33,10 @@ Auth::routes();
 Route::get('dash', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dash');
 Route::post('add_event', [App\Http\Controllers\AdminController::class, 'addEvent'])->name('addEvent');
 
+Route::post('delEvent', [App\Http\Controllers\AdminController::class, 'delEvent'])->name('delEvent');
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('calender', [App\Http\Controllers\HomeController::class, 'calender'])->name('calender');
 Route::get('news', [App\Http\Controllers\HomeController::class, 'news'])->name('news');
 
 
