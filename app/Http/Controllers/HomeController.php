@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Contactus;
 use App\Models\Event;
+use App\Models\Photo;
 
 
 class HomeController extends Controller
@@ -80,6 +81,14 @@ class HomeController extends Controller
       Session::flash('success', __('trans.message'));
 
       return redirect()->route('contact');
+    }
+
+
+    public function media()
+    {
+        $image = Photo::all();
+
+        return view('gallery')->with(['imgs' => $image]);
     }
 
 }

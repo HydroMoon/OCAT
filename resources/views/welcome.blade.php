@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="col-sm mt-2">
-            <div class="card text-left p-3">
+            <div class="card shadow-sm text-left p-3">
                 <div class="card-body">
                     <h4 class="card-title d-inline">التقويم - احداث الاسبوع</h4>
                     <a class="text-muted d-inline float-end" href="{{ route('calender') }}">الذهاب للتقويم</a>

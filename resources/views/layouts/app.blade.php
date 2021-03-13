@@ -15,7 +15,7 @@
 
     <title>كلية أمدرمان للطيران والتكنولوجيا</title>
 
-    @yield('stylee')
+ 
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,12 +33,13 @@
 
     <!-- Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.rtl.min.css" rel="stylesheet"/>
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous"> --}}
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+
+    @yield('stylee')
+
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 
-<body class="Site">
+<body class="Site myDiv">
     <div id="app" class="Site-content">
         <main class="container">
             @yield('content')

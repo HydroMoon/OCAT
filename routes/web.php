@@ -30,10 +30,17 @@ Route::resource('/posts', 'App\Http\Controllers\PostController');
 
 Auth::routes();
 
+Route::get('messages', [App\Http\Controllers\AdminController::class, 'getMessage'])->name('message');
+
 Route::get('dash', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dash');
 Route::post('add_event', [App\Http\Controllers\AdminController::class, 'addEvent'])->name('addEvent');
 
 Route::post('delEvent', [App\Http\Controllers\AdminController::class, 'delEvent'])->name('delEvent');
+
+Route::get('add-media', [App\Http\Controllers\PostController::class, 'mediaPanel'])->name('getMedia');
+Route::get('media', [App\Http\Controllers\HomeController::class, 'media'])->name('gallery');
+
+Route::post('image-upload', [App\Http\Controllers\PostController::class, 'storeMedia'])->name('storeMedia');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('calender', [App\Http\Controllers\HomeController::class, 'calender'])->name('calender');

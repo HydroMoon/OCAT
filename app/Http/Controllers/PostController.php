@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Session;
@@ -172,5 +173,35 @@ class PostController extends Controller
 
       Session::flash('success', __('trans.post_delete'));
       return redirect()->route('posts.index');
+    }
+
+    public function mediaPanel()
+    {
+      return view('posts.media');
+    }
+
+    public function storeMedia(Request $request)
+    {
+        
+        $this->validate($request, array(
+            'img' => 'image'
+        ));
+
+        $images = new Photo;
+
+        if ($request->hasFile('img')) {
+            $image = $request->file('img');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('gallery/' . $filename);
+            Image::make($image)->save($location);
+            $images->image = $filename;
+            $images->album = $request->album;
+          }
+
+        $images->save();
+
+        //Session::flash('success', __('trans.img_cover'));
+
+        return redirect()->back();
     }
 }

@@ -35,7 +35,10 @@
                         <a href="{{ route("programs") }}" class="nav-link text-white">البرامج</a>
                     </li>
                     <li>
-                        <a href="{{ route('about') }}" class="nav-link text-white">الصور والفديو</a>
+                        <a href="{{ route("calender") }}" class="nav-link text-white">التقويم</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('gallery') }}" class="nav-link text-white">الصور والفديو</a>
                     </li>
                 </ul>
             </div>

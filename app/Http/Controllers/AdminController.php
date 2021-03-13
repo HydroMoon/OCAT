@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Event;
+use App\Models\Contactus as Message;
 
 class AdminController extends Controller
 {
@@ -47,5 +48,13 @@ class AdminController extends Controller
         $event->delete();
 
         return redirect()->route('calender');
+    }
+
+    public function getMessage()
+    {
+        $mess = new Message;
+        $mess = Message::all();
+
+        return view('messages')->with(['mess' => $mess]);
     }
 }

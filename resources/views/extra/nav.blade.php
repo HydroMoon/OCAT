@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{ route('calender') }}">التقويم</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('programs') }}">الصور والفديو</span></a>
+                    <a class="nav-link" href="{{ route('gallery') }}">الصور والفديو</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="{{ route('contact') }}">تواصل معنا</span></a>

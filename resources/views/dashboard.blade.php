@@ -22,13 +22,13 @@
       <ul>
         <div class="form-group">
           <a class="btn btn-secondary" href="#">صورة الغلاف</a>
-          <a class="btn btn-secondary" href="#">الصور والفيديو</a>
+          <a class="btn btn-secondary" href="{{ route('getMedia') }}">الصور</a>
         </div>
       </ul>
       <div class="card-title">الرسائل</div>
       <ul>
         <div class="form-group">
-          <a class="btn btn-secondary" href="#">رؤية الرسائل</a>
+          <a class="btn btn-secondary" href="{{ route('message') }}">رؤية الرسائل</a>
         </div>
       </ul>
     </div>
