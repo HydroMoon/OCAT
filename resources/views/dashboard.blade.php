@@ -18,11 +18,11 @@
           <a class="btn btn-secondary" href="{{ route('calender') }}">إضافة وحذف الاحداث</a>
         </div>
       </ul>
-      <div class="card-title">الصور والفيديو</div>
+      <div class="card-title">الصور</div>
       <ul>
         <div class="form-group">
-          <a class="btn btn-secondary" href="#">صورة الغلاف</a>
-          <a class="btn btn-secondary" href="{{ route('getMedia') }}">الصور</a>
+          <a class="btn btn-secondary" href="{{ route('myMedia') }}">الصور</a>
+          <a class="btn btn-secondary" href="{{ route('getMedia') }}">إضافة الصور</a>
         </div>
       </ul>
       <div class="card-title">الرسائل</div>

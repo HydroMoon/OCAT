@@ -7,7 +7,7 @@ use App\Models\Post;
 use App\Models\Contactus;
 use App\Models\Event;
 use App\Models\Photo;
-
+use Alert;
 
 class HomeController extends Controller
 {
@@ -55,14 +55,14 @@ class HomeController extends Controller
     {
       $post = Post::where('slug', '=', $slug)->first();
 
-      
+
 
       return view('blog.single')->with(['post' => $post]);
     }
 
     public function saveMessage(Request $request)
     {
-      
+
       //Validate
       $this->validate($request, array(
         'name' => 'required|string|max:255',
@@ -78,15 +78,16 @@ class HomeController extends Controller
 
       $mess->save();
 
-      Session::flash('success', __('trans.message'));
+      Alert::success(__('words.success'), __('trans.message'));
+
 
       return redirect()->route('contact');
     }
 
 
-    public function media()
+    public function media($album)
     {
-        $image = Photo::all();
+        $image = Photo::where('album', $album)->get();
 
         return view('gallery')->with(['imgs' => $image]);
     }

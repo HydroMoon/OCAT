@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
+use App\Models\Album;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use Session;
 use Image;
 use Storage;
 use Purifier;
+use Alert;
 
 class PostController extends Controller
 {
@@ -71,7 +72,7 @@ class PostController extends Controller
 
         $post->save();
 
-        Session::flash('success', __('trans.post_add'));
+      Alert::success(__('words.success'), __('trans.post_add'));
 
         return redirect()->route('posts.show', $post->id);
     }
@@ -151,7 +152,7 @@ class PostController extends Controller
       $post->save();
 
       // set flash data with success message
-      Session::flash('success', __('trans.post_edit'));
+      Alert::success(__('words.success'), __('trans.post_edit'));
 
       // redirect with flash data to posts.show
       return redirect()->route('posts.show', $post->id);
@@ -171,13 +172,34 @@ class PostController extends Controller
 
       $post->delete();
 
-      Session::flash('success', __('trans.post_delete'));
+      Alert::success(__('words.success'), __('trans.post_delete'));
+
       return redirect()->route('posts.index');
     }
 
     public function mediaPanel()
     {
-      return view('posts.media');
+
+      $album = Album::all();
+
+      return view('posts.media')->with(['album' => $album]);
+    }
+
+    public function addAlbum(Request $request)
+    {
+        $this->validate($request, array(
+            'album' => 'required',
+        ));
+
+        $album = new Album;
+
+        $album->album = $request->album;
+
+        $album->save();
+
+        Alert::success(__('words.success'), 'تمت إضافة الالبوم بنجاح');
+
+        return redirect()->back();
     }
 
     public function storeMedia(Request $request)
@@ -193,14 +215,15 @@ class PostController extends Controller
             $image = $request->file('img');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('gallery/' . $filename);
-            Image::make($image)->save($location);
+            Image::make($image)->fit(1280, 720)->save($location);
             $images->image = $filename;
             $images->album = $request->album;
           }
 
         $images->save();
 
-        //Session::flash('success', __('trans.img_cover'));
+      Alert::success(__('words.success'),'تمت إضافة الصور بنجاح');
+
 
         return redirect()->back();
     }

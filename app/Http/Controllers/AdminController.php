@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Event;
+use App\Models\Photo;
 use App\Models\Contactus as Message;
+use Alert;
+use Storage;
 
 class AdminController extends Controller
 {
@@ -36,7 +39,7 @@ class AdminController extends Controller
 
           $event->save();
 
-          Session::flash('success', __('trans.post_add'));
+      Alert::success(__('words.success'), 'تمت إضافة الحدث بنجاح');
 
         return redirect()->route('calender');
     }
@@ -57,4 +60,26 @@ class AdminController extends Controller
 
         return view('messages')->with(['mess' => $mess]);
     }
+
+    public function images()
+    {
+        $image = Photo::all();
+
+        return view('images')->with(['imgs' => $image]);
+    }
+
+    public function destroy(Request $request)
+    {
+        $image = Photo::find($request->id);
+
+        Storage::delete($image->image);
+
+        $image->delete();
+
+        Alert::success(__('words.success'), __('trans.img_cover_delete'));
+
+        return redirect()->back();
+    }
+
+    
 }

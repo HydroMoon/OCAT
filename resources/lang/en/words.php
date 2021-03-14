@@ -89,4 +89,5 @@ return array (
   'subjectname' => 'Subjects Links',
   'subshow' => 'Show Subjects',
   'addsub' => 'Add Subjects',
+  'success' => 'Success'
 );

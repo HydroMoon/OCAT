@@ -89,4 +89,5 @@ return array (
   'subjectname' => 'روابط المواد',
   'subshow' => 'عرض المواد',
   'addsub' => 'إضافة المواد',
+  'success' => 'نجاح'
 );

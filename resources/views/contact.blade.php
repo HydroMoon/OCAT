@@ -37,9 +37,10 @@
                     <hr>
                     <p class="mb-1"><strong>أرقام التواصل:</strong> </p>
                     <ul class="list-unstyled h6">
-                        <li class="mb-1" dir="ltr">+249 900 326 039</li>
-                        <li class="mb-1" dir="ltr">+249 925 426 241</li>
-                        <li class="mb-1" dir="ltr">+249 922 257 773</li>
+                        <li class="mb-1" dir="ltr">+249 183 764 532</li>
+                        <li class="mb-1" dir="ltr">+249 912 330 738</li>
+                        <li class="mb-1" dir="ltr">+249 912 326 563</li>
+                        <li class="mb-1" dir="ltr">+249 123 777 312</li>
                     </ul>
                 </div>
             </div>

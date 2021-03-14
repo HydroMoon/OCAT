@@ -43,6 +43,7 @@
     <div id="app" class="Site-content">
         <main class="container">
             @yield('content')
+            @include('sweetalert::alert')
 
 
             @include('extra.footer')
