@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('extra.nav')
 <div class="card my-3">
     <div class="card-header">{{ __('courses.messages') }}</div>
     <div class="card-body" style="overflow-x:auto;">

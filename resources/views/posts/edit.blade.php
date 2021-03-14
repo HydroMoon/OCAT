@@ -16,7 +16,6 @@
 </script>
 @endsection
 @section('content')
-@include('extra.nav')
 <div class="row">
     <div class="col-lg-8">
         <form id="editpost" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data" method="POST">

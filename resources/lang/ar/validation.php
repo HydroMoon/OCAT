@@ -11,6 +11,8 @@ return array (
   'array' => 'يجب أن يكون :attribute ًمصفوفة.',
   'before' => 'يجب على :attribute أن يكون تاريخًا سابقًا للتاريخ :date.',
   'before_or_equal' => ':attribute يجب أن يكون تاريخا سابقا أو مطابقا للتاريخ :date.',
+  'album' => 'الالبوم',
+  'img' => 'الصورة',
   'between' => 
   array (
     'numeric' => 'يجب أن تكون قيمة :attribute بين :min و :max.',
@@ -159,6 +161,8 @@ return array (
     'Y-m-d' => 'YYYY-MM-DD',
     'certificate' => 'الشهادة',
     'info' => 'المعلومات',
+    'album' => 'الالبوم',
+    'img' => 'الصورة',
   ),
   'cert' => 'الشهادة',
   'teacher' => 'مشرف',

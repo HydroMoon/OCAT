@@ -206,7 +206,7 @@ class PostController extends Controller
     {
         
         $this->validate($request, array(
-            'img' => 'image'
+            'img' => 'required|image'
         ));
 
         $images = new Photo;
@@ -218,6 +218,7 @@ class PostController extends Controller
             Image::make($image)->fit(1280, 720)->save($location);
             $images->image = $filename;
             $images->album = $request->album;
+            $images->caption = $request->caption;
           }
 
         $images->save();

@@ -2,7 +2,6 @@
 
 @section('content')
 <div>
-    @include('extra.nav')
     <div class="row pr-2 pl-2 mt-2 p-2">
         <div class="col-sm-4">
             <form action="{{ route('contactus') }}" method="post">

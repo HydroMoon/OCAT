@@ -43,7 +43,7 @@ Route::delete('media-del', [App\Http\Controllers\AdminController::class, 'destro
 
 Route::get('add-media', [App\Http\Controllers\PostController::class, 'mediaPanel'])->name('getMedia');
 Route::post('add-media-album', [App\Http\Controllers\PostController::class, 'addAlbum'])->name('storeMediaAlbum');
-Route::get('media/{album}', [App\Http\Controllers\HomeController::class, 'media'])->name('gallery');
+Route::get('media/{album?}', [App\Http\Controllers\HomeController::class, 'media'])->name('gallery');
 
 Route::post('image-upload', [App\Http\Controllers\PostController::class, 'storeMedia'])->name('storeMedia');
 

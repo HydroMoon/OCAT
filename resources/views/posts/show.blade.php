@@ -3,7 +3,6 @@
 {{ $post->title }}
 @endsection
 @section('content')
-@include('extra.nav')
 <div class="row">
   <div class="col-lg-8">
 

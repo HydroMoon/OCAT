@@ -2,7 +2,6 @@
 
 @section('content')
 <div dir="rtl" class="pb-4">
-    @include('extra.nav')
 
     <div class="row pr-2 pl-2 pt-2 mt-2">
         <div class="col-sm">

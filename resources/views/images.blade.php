@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('extra.nav')
     <div class="row"><div class="col-sm" style="overflow-x:auto;">
         <table class="table table-striped">
                 <thead>

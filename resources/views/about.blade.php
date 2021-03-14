@@ -2,8 +2,6 @@
 
 @section('content')
 <div>
-    @include('extra.nav')
-
     <div class="row mx-1 border" style="background: #f9f9f9;">
         <div class="col-sm-6">
             <div class="mx-2 mt-4 px-5">

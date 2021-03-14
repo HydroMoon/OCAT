@@ -15,7 +15,7 @@
 
     <title>كلية أمدرمان للطيران والتكنولوجيا</title>
 
- 
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,15 +24,15 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.rtl.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.rtl.min.css" rel="stylesheet" />
 
     @yield('stylee')
 
@@ -40,15 +40,15 @@
 </head>
 
 <body class="Site myDiv">
-    <div id="app" class="Site-content">
-        <main class="container">
-            @yield('content')
-            @include('sweetalert::alert')
+    @include('extra.nav')
+    <main class="container Site-content">
+        @yield('content')
+        @include('sweetalert::alert')
 
 
-            @include('extra.footer')
-        </main>
-    </div>
+        
+    </main>
+    @include('extra.footer')
 </body>
 
 </html>

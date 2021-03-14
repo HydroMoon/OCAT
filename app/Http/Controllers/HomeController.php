@@ -8,18 +8,10 @@ use App\Models\Contactus;
 use App\Models\Event;
 use App\Models\Photo;
 use Alert;
+use App\Models\Album;
 
 class HomeController extends Controller
 {
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
 
     /**
      * Show the application dashboard.
@@ -85,11 +77,16 @@ class HomeController extends Controller
     }
 
 
-    public function media($album)
+    public function media($album = '')
     {
+
+        $alb = Album::first();
+        
         $image = Photo::where('album', $album)->get();
 
-        return view('gallery')->with(['imgs' => $image]);
+        $album = Album::all();
+
+        return view('gallery')->with(['imgs' => $image, 'album' => $album]);
     }
 
 }

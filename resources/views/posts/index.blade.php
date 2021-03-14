@@ -3,7 +3,6 @@
 {{ __('courses.posts') }}
 @endsection
 @section('content')
-@include('extra.nav')
   <div class="row px-3">
     <div class="col-md-10 mt-2">
       <h1>{{ __('courses.posts') }}</h1>

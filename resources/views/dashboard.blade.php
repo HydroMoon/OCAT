@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('extra.nav')
 <div class="card mt-3 mb-3 px-3">
     <div class="card-header">لوحة التحكم</div>
     <div class="card-body">

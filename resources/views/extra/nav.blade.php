@@ -1,4 +1,5 @@
-<img class="card-img-top mb-2" src="{{ asset('images/logo.png') }}" alt="">
+<div class="container">
+    <img class="card-img-top mb-2" src="{{ asset('images/logo.png') }}" alt="">
 <nav dir="rtl" class="navbar navbar-expand-sm navbar-dark shadow-sm fw-bold fs4" style="background-color: #bb375f">
     <div class="container-fluid">
         <a class="navbar-brand d-sm-block d-md-none" href="/">كلية امدرمان</a>
@@ -57,3 +58,4 @@
         </div>
     </div>
 </nav>
+</div>

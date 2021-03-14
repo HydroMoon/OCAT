@@ -22,7 +22,6 @@
 
 
 @section('content')
-@include('extra.nav')
 <div class="row">
   <div class="col-md-8 mt-4 col-offset-2 px-3" style="float: none;">
     <h1 class="mb-3">{{ __('courses.addpost') }}</h1>
