@@ -1,5 +1,9 @@
 <!doctype html>
-<html dir="rtl" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    @if (app()->getLocale() == 'en')
+    <html lang="{{ app()->getLocale() }}" dir="ltr">
+  @else
+    <html lang="{{ app()->getLocale() }}" dir="rtl">
+  @endif
 
 <head>
     <meta charset="utf-8">

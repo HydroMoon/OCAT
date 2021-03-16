@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row mt-3">
+<div dir="rtl" class="row mt-3">
     <div class="col-sm-3 border-left">
         <h4 class="h4 mt-2 text-muted fw-bold">البوم الصور</h4>
         <ul class="list-group list-group-flush">

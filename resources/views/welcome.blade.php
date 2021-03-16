@@ -39,15 +39,23 @@
         <div class="col-sm mt-2">
             <div class="shadow-sm p-4">
                 <div class="media">
-                    <h3 class="h3 d-inline">كلمة رئيس مجلس الإدارة</h3>
+                    <h3 class="h3 d-inline">كلمة رئيس مجلس الأمناء</h3>
                     <img class="rounded-circle img-thumbnail float-end d-inline"
                         src="{{ asset('images/dean.jpeg') }}" alt=""
                         width="75">
                     <div class="media-body ms-3 mt-2">
                         <blockquote class="blockquote border-0 p-0">
-                            <p class="font-italic lead"><i class="fa fa-quote-right mx-3 text-success"></i>يطيب لي مخاطبتكم  في هذا اليوم الإستثنائي التاريخي الذي يجمع مابين ذكرى الاستقلال المجيد واستقبال طلابنا الجدد الذين انضموا لنا هذا العام
-
-                                وهم بلا شك دماءً جديدة تم ضخها في أوصال هذه الجامعة الفتية لمواصلة الركب  مع أخوة ً لهم سابقين سطروا تفوقهم وتميزهم  بحروف من ذهب.</p>
+                            <p class="font-italic lead"><i class="fa fa-quote-right mx-3 text-success"></i>
+                                يطيب لي مخاطبتكم في هذا اليوم بمناسبة استقبال طلابنا الجدد الذين انضموا لنا هذا العام وهم بلا شك دماءً جديدة تم ضخها في أوصال هذه الكلية الفتية لمواصلة الركب مع أخوة ً لهم سابقين سطروا تفوقهم وتميزهم بحروف من ذهب.
+                                <br>
+                                انبعثت الفكرة من شركة العسال التي تعمل في مجال التعليم والتدريب وبناء القدرات ورصيدها في التدريب:
+                                <ul class="list-unstyled">
+                                    <li>أكاديمية جلف بريدج للطيران</li>
+                                    <li>مركز قلف بريدج للتدريب وبناء القدرات</li>
+                                    <li>مركز قلف للتدريب المهن الطبية (الصيدلة - المختبرات الطبية - التمريض)</li>
+                                    <li>مركز قلف للتدريب المهني والتلمذة الصناعية</li>
+                                </ul><br>
+                            </p>
                             <footer class="blockquote-footer mt-3">حسن خلف الله محمود
                             </footer>
                         </blockquote>

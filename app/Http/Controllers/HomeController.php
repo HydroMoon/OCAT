@@ -80,9 +80,14 @@ class HomeController extends Controller
     public function media($album = '')
     {
 
+      if ($album == '') {
         $alb = Album::first();
-        
+
+        $image = Photo::where('album', $alb->album)->get();
+      } else {
         $image = Photo::where('album', $album)->get();
+      }
+        
 
         $album = Album::all();
 

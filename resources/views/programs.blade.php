@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
+    <div dir="rtl">
         <div div class="row p-2 mx-2 border" style="background: #f9f9f9;">
           <h4 class="h4 mx-2 my-3 text-muted" >البرامج المتاحة في الجامعة</h4>
             <div class="accordion" id="accordionExample">

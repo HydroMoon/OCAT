@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('lang/{lang}', ['as' => 'lang', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
+
 Route::get('about', function () {
     return view('about');
 })->name('about');

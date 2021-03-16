@@ -6,35 +6,35 @@
         <div class="col-sm-4">
             <form action="{{ route('contactus') }}" method="post">
                 @csrf
-                <h4 class="h4">للتواصل معنا</h4>
+                <h4 class="h4">{{ __('main.contact') }}</h4>
                 <div class="form-group ps-3">
-                    <label for="">الأسم</label>
+                    <label for="">{{ __('main.name') }}</label>
                     <input type="text" class="form-control mt-1" name="name" placeholder="">
                 </div>
                 <div class="form-group ps-3">
-                    <label for="">البريد الإلكتروني</label>
+                    <label for="">{{ __('main.email') }}</label>
                     <input type="email" class="form-control  mt-1" name="email" aria-describedby="emailHelpId"
                         placeholder="">
                 </div>
                 <div class="form-group ps-3">
-                    <label for="">النص</label>
+                    <label for="">{{ __('main.text') }}</label>
                     <textarea class="form-control  mt-1" name="message" rows="3"></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-secondary ms-3 mt-2">تواصل</button>
+                    <button class="btn btn-secondary ms-3 mt-2">{{ __('main.send') }}</button>
                 </div>
             </form>
         </div>
         <div class="col-sm-8">
             <div class="">
                 <div class="col-lg-5 col-md-12 mb-0 mb-md-0">
-                    <h4 class="mb-3">معلومات التواصل</h4>
+                    <h4 class="mb-3">{{ __('main.contactinfo') }}</h4>
                     <hr>
-                    <p class="mb-1"><strong>العنوان:</strong> </p>
-                    <p class="mb-1">العمادة: الخرطوم -السوق العربي - شرق عمارة الفيحاء بنك فيصل الإسلامي</p>
-                    <p class="mb-1">الفرع: امدرمان - غرب استاد المريخ</p>
+                    <p class="mb-1"><strong>{{ __('main.address') }}</strong> </p>
+                    <p class="mb-1">{{ __('main.loc1') }}</p>
+                    <p class="mb-1">{{ __('main.loc2') }}</p>
                     <hr>
-                    <p class="mb-1"><strong>أرقام التواصل:</strong> </p>
+                    <p class="mb-1"><strong>{{ __('main.contactnum') }}</strong> </p>
                     <ul class="list-unstyled h6">
                         <li class="mb-1" dir="ltr">+249 183 764 532</li>
                         <li class="mb-1" dir="ltr">+249 912 330 738</li>
