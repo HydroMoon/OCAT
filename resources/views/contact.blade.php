@@ -38,6 +38,7 @@
                     <ul class="list-unstyled h6">
                         <li class="mb-1" dir="ltr">+249 183 764 532</li>
                         <li class="mb-1" dir="ltr">+249 912 330 738</li>
+                        <li class="mb-1" dir="ltr">+249 918 187 187</li>
                         <li class="mb-1" dir="ltr">+249 912 326 563</li>
                         <li class="mb-1" dir="ltr">+249 123 777 312</li>
                     </ul>
