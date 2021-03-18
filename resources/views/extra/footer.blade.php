@@ -13,7 +13,7 @@
                     <p>{{ __('main.loc2') }}</p>
                     <hr>
                     <p class="fs-5 text-white">{{ __('main.social') }}</p>
-                    <a class="btn btn-lg btn-primary btn-floating" style="background-color: #3b5998" target="_blank" href="https://www.facebook.com/%D9%83%D9%84%D9%8A%D8%A9-%D8%A7%D9%85%D8%AF%D8%B1%D9%85%D8%A7%D9%86-%D9%84%D9%84%D8%B7%D9%8A%D8%B1%D8%A7%D9%86-%D9%88%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7-855693597875449/?ref=page_internal" role="button"><i
+                    <a class="btn btn-lg btn-primary btn-floating" style="background-color: #3b5998" target="_blank" href="https://www.facebook.com/Omdurman-Aviation-and-Technology-104282398163623/" role="button"><i
                             class="fab fa-facebook-f me-2"></i></a>
                 </div>
                 <!-- Grid column -->
