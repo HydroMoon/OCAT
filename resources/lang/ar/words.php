@@ -89,5 +89,7 @@ return array (
   'subjectname' => 'روابط المواد',
   'subshow' => 'عرض المواد',
   'addsub' => 'إضافة المواد',
-  'success' => 'نجاح'
+  'success' => 'نجاح',
+  'manage' => 'الإدارة',
+  'mana' => 'الإدارات والامانات',
 );

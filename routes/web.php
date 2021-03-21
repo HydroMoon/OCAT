@@ -23,6 +23,10 @@ Route::get('programs', function () {
     return view('programs');
 })->name('programs');
 
+Route::get('administrations', function () {
+    return view('administrations');
+})->name('admini');
+
 Route::get('contact', function () {
     return view('contact');
 })->name('contact');

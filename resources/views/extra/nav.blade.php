@@ -20,6 +20,9 @@
                         <a class="nav-link" href="{{ route('news') }}">{{ __('main.news') }}</span></a>
                     </li>
                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="{{ route('admini') }}">{{ __('words.mana') }}</a>
+                    </li>  
+                    <li class="nav-item dropdown">
                         <a class="nav-link" href="{{ route('programs') }}">{{ __('main.programs') }}</span></a>
                     </li>
                     <li class="nav-item dropdown">
